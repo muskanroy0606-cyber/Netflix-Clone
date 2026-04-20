@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-netflix-red: #e50914;
+  --color-netflix-red-hover: #f40612;
+  --color-netflix-dark: #141414;
+  --color-netflix-light: #ffffff;
+  --color-netflix-gray-light: #f3f3f3;
+  --color-netflix-gray-dark: #333333;
+}
+
+@layer base {
+  :root {
+    --bg-primary: var(--color-netflix-light);
+    --bg-secondary: var(--color-netflix-gray-light);
+    --text-primary: var(--color-netflix-dark);
+    --text-secondary: #555555;
+    --border-color: #e5e5e5;
+    --overlay: rgba(255, 255, 255, 0.7);
+  }
+
+  .dark {
+    --bg-primary: var(--color-netflix-dark);
+    --bg-secondary: var(--color-netflix-gray-dark);
+    --text-primary: var(--color-netflix-light);
+    --text-secondary: #aaaaaa;
+    --border-color: #404040;
+    --overlay: rgba(0, 0, 0, 0.7);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Custom scrollbar for rows */
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
