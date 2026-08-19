@@ -5,7 +5,7 @@ import Search from './pages/Search';
 import Profile from './pages/Profile';
 import MyList from './pages/MyList';
 
-function App() {
+function App() {   
   return (
     <div className="app">
       <Routes>
